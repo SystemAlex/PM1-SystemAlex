@@ -1,13 +1,14 @@
 :root {
-    --var-amarillo: #ffff00;
+    --var-amarillo: #FFFF00;
 }
+
 * {
     font-family: 'Satoshi', sans-serif;
     font-weight: 900;
-  }
-  
-html{
-    background: #f9fafb;
+}
+
+html {
+    background: #FFFFDB;
     padding: 1rem 5rem;
 }
 
@@ -15,7 +16,16 @@ html{
     background: var(--var-amarillo);
 }
 
-section, .logos {
+.back-transparent {
+    background: transparent;
+}
+
+.back-yellow {
+    background: var(--var-amarillo);
+}
+
+section,
+.logos {
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
@@ -37,7 +47,9 @@ section, .logos {
     justify-content: space-evenly;
 }
 
-h1, h3, h4 {
+h1,
+h3,
+h4 {
     background-color: var(--var-amarillo);
     padding: 4px 8px;
     border-radius: 5rem;
@@ -47,24 +59,8 @@ h4 {
     border-radius: 0rem 0rem 1rem 1rem;
 }
 
-.back-LightGrey {
-    background-color: rgba(211, 211, 211, 70%);
-}
-
-.back-Silver {
-    background-color: rgba(192, 192, 192, 70%);
-}
-
-.back-DarkGray {
-    background-color: rgba(169, 169, 169, 70%);
-}
-
-.back-DimGray {
-    background-color: rgba(105, 105, 105, 70%);
-}
-
-.back-Yellow {
-    background: var(--var-amarillo);
+section {
+    background-color: #CBCB01;
 }
 
 p:first-of-type {
@@ -95,12 +91,14 @@ p {
     transition: all 500ms ease-in-out;
 }
 
-.logos a:hover, .logos a:focus {
+.logos a:hover,
+.logos a:focus {
     filter: grayscale(0%);
     box-shadow: 0 0 0 15px var(--var-amarillo);
 }
 
-.logos a:hover img, .logos a:focus img {
+.logos a:hover img,
+.logos a:focus img {
     transform: scale(100%);
 }
 
@@ -108,31 +106,43 @@ p {
     width: 100%;
 }
 
-input, textarea {
+input,
+textarea {
     margin: 0.5rem 0px;
     padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: 2px solid black;
+    border-radius: 0.25rem;
+    background-color: #FFFFDB;
+    border: 2px solid #343409;
     font-weight: normal;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid #FFFFDB;
+}
+
+input:hover,
+textarea:hover {
+    border: 2px solid var(--var-amarillo);
 }
 
 button {
     margin: 0.5rem 0px;
     padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: 2px solid buttonface;
+    border-radius: 0.25rem;
+    border: 2px solid #FEFE33;
     width: fit-content;
+    background-color: #FEFE33;
 }
 
 button:hover {
     background-color: var(--var-amarillo);
     outline: 5px solid var(--var-amarillo);
-    outline-offset: -3px;
 }
 
 :focus-visible {
     outline: 5px solid var(--var-amarillo);
-    outline-offset: -3px;
+    border-radius: 0.25rem;
 }
 
 #actividades {
