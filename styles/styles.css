@@ -1,0 +1,16 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section * {
+    padding: 2px 8px;
+}
+
+h1,
+h3 {
+    background-color: #ff0;
+}
+
+.text-center {
+    text-align: center;
+}
