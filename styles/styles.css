@@ -2,13 +2,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-section * {
-    padding: 2px 8px;
+d-flex {
+    display: flex;
 }
 
-h1,
-h3 {
+h1, h3 {
     background-color: #ff0;
+    padding: 2px 8px;
 }
 
 .text-center {
