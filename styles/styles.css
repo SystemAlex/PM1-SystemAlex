@@ -1,14 +1,17 @@
 :root {
     --var-amarillo: #FFFF00;
+    --var-amarillo-dark: #CBCB01;
+    --var-amarillo-light: #FFFFDB;
 }
 
 * {
     font-family: 'Satoshi', sans-serif;
     font-weight: 900;
+    transition: all 500ms ease-in-out;
 }
 
 html {
-    background: #FFFFDB;
+    background: #78771b;
     padding: 1rem 5rem;
 }
 
@@ -29,6 +32,10 @@ section,
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
+}
+
+section, #actividades {
+    border: 2px solid var(--var-amarillo-dark);
 }
 
 .d-flex {
@@ -52,15 +59,16 @@ h3,
 h4 {
     background-color: var(--var-amarillo);
     padding: 4px 8px;
-    border-radius: 5rem;
+    border-radius: 8px;
+    width: fit-content;
 }
 
 h4 {
-    border-radius: 0rem 0rem 1rem 1rem;
+    border-radius: 0rem 0rem 8px 8px;
 }
 
-section {
-    background-color: #CBCB01;
+section:first-of-type {
+    border: none;
 }
 
 p:first-of-type {
@@ -76,7 +84,6 @@ p {
 .logos img {
     max-height: 256px;
     transform: scale(80%);
-    transition: all 500ms ease-in-out;
     border-radius: 1rem;
 }
 
@@ -88,7 +95,7 @@ p {
     overflow: hidden;
     text-align: center;
     filter: grayscale(100%);
-    transition: all 500ms ease-in-out;
+    box-shadow: 0 0 0 0 var(--var-amarillo);
 }
 
 .logos a:hover,
@@ -110,26 +117,28 @@ input,
 textarea {
     margin: 0.5rem 0px;
     padding: 0.5rem;
-    border-radius: 0.25rem;
-    background-color: #FFFFDB;
-    border: 2px solid #343409;
+    border-radius: 8px;
+    background-color: var(--var-amarillo-light);
+    border: 2px solid var(--var-amarillo-dark);
     font-weight: normal;
 }
 
 input:focus,
 textarea:focus {
     border: 2px solid #FFFFDB;
+    box-shadow: inset 0px 0px 0px 2px var(--var-amarillo-dark);
 }
 
 input:hover,
 textarea:hover {
     border: 2px solid var(--var-amarillo);
+    box-shadow: inset 0px 0px 0px 2px var(--var-amarillo-dark);
 }
 
 button {
     margin: 0.5rem 0px;
     padding: 0.5rem;
-    border-radius: 0.25rem;
+    border-radius: 8px;
     border: 2px solid #FEFE33;
     width: fit-content;
     background-color: #FEFE33;
@@ -142,9 +151,12 @@ button:hover {
 
 :focus-visible {
     outline: 5px solid var(--var-amarillo);
-    border-radius: 0.25rem;
+    border-radius: 8px;
 }
 
 #actividades {
-    min-height: 200px;
+    min-height: 252px;
+    margin: 0.5rem 0px;
+    padding: 0.5rem;
+    border-radius: 1rem;
 }
