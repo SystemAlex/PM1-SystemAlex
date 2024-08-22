@@ -71,10 +71,6 @@ section:first-of-type {
     border: none;
 }
 
-p:first-of-type {
-    text-indent: 0px;
-}
-
 p {
     font-weight: normal;
     margin-bottom: 4px;
@@ -82,20 +78,22 @@ p {
 }
 
 .logos img {
-    max-height: 256px;
+    max-height: 17vw;
     transform: scale(80%);
     border-radius: 1rem;
 }
 
 .logos a {
     background: var(--var-amarillo);
-    width: 256px;
-    height: 256px;
+    width: 17vw;
+    height: 17vw;
     border-radius: 1rem;
     overflow: hidden;
     text-align: center;
     filter: grayscale(100%);
     box-shadow: 0 0 0 0 var(--var-amarillo);
+    max-width: 256px;
+    max-height: 256px;
 }
 
 .logos a:hover,
