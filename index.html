@@ -1,52 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soy Henry - Proyecto M1</title>
-    <link href="/styles/reset.css" rel="stylesheet" type="text/css">
-    <link href="/styles/styles.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-    <link rel="manifest" href="/assets/img/site.webmanifest">
-    <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/assets/img/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soy Henry - Proyecto M1</title>
+<link href="styles/reset.css" rel="stylesheet" type="text/css">
+<link href="styles/styles.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#daedf8">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#daedf8">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#daedf8">
 </head>
 <body>
-    <section class="d-flex align-items-center flex-column back-transparent">
-        <h1>Soy Henry - Proyecto M1</h1>
-        <h4>por SystemAlex</h4>
-    </section>
-    <section class="back-amarillo">
-        <h3>Sobre Mi:</h3>
-        <p>Me llamo <i>Francisco Guillermo Alexandro Beese</i>, nací en <a href="https://www.bing.com/maps?osid=e565a4fa-b658-4108-862c-5495ed781414&cp=-26.429005~-54.691533&lvl=12.2442&pi=0&v=2&sV=2&form=S00027" target="_blank">Eldorado, Misiones, Argentina</a>. Actualmente vivo en <a href="https://www.bing.com/maps?&cp=-25.969341~-54.513974&lvl=11.57571&pi=0&osid=638af563-b0b8-4fd3-8385-c2bf4b16da85&v=2&sV=2&form=S00027" target="_blank">Wanda, Misiones, Argentina</a>. Tengo 48 años y mi cumpleaños es el 16 de diciembre <b>(espero los regalos)</b>.</p>
-        <p>Empecé con programación en Agosto de 1.989, en aquel entonces el lenguaje de programación más popular era el <a href="https://es.wikipedia.org/wiki/BASIC" target="_blank">BASIC</a>, desde entonces me he actualizado con la mayoría de los lenguajes de programación. He realizado varios trabajos independientes para uso particular de diferentes empresas, espero que con este curso pueda profesionalizarme y mejorar mis aptitudes de programación.</p>
-    </section>
-    <section class="d-flex align-items-center flex-column">
-        <h3>Mis Tecnologías Favoritas</h3>
-        <div class="logos w-100 d-flex justify-content-evenly">
-                <a title="W3C, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://es.wikipedia.org/wiki/HTML5" target="_blank"><img alt="HTML5 official logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/256px-HTML5_logo_and_wordmark.svg.png?20170517184425"></a>
-                <a title="Rudloff, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://es.wikipedia.org/wiki/CSS" target="_blank"><img alt="CSS3 logo and wordmark" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/256px-CSS3_logo_and_wordmark.svg.png?20160530175649"></a>
-                <a title="Christopher Williams, Public domain, via Wikimedia Commons" href="https://es.wikipedia.org/wiki/JavaScript" target="_blank"><img alt="Unofficial JavaScript logo 2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/256px-Unofficial_JavaScript_logo_2.svg.png?20141107110902"></a>
+<nav class="top-menu">
+  <ul class="d-flex">
+    <li><a href="#home">Inicio</a></li>
+    <li><a href="#about">Sobre Mi</a></li>
+    <li><a href="#favs">Favoritos</a></li>
+    <li><a href="#activs">Actividades</a></li>
+  </ul>
+</nav>
+<aside class="side-menu align-items-center">
+  <ul>
+    <li><a href="#home">Inicio</a></li>
+    <li><a href="#about">Sobre Mi</a></li>
+    <li><a href="#favs">Favoritos</a></li>
+    <li><a href="#activs">Actividades</a></li>
+  </ul>
+</aside>
+<main class="main">
+  <section id="home" class="d-flex align-items-center justify-content-center flex-column">
+    <h1 class="neonAmarillo">Soy Henry - Proyecto M1</h1>
+    <h4 class="neonAmarillo">por SystemAlex</h4>
+  </section>
+  <section id="about">
+    <div>
+      <div class="datos">
+        <h3 class="pos-abs over">Sobre Mi:</h3>
+        <ul class="pizarra">
+          <li> <span>
+            <div>
+              <h2>Mi Nombre</h2>
+              <i>Francisco Guillermo Alexandro Beese</i> </div>
+            </span> </li>
+          <li> <span>
+            <div>
+              <h2>Mi edad</h2>
+              <p>48 años y cumplo años es el 16 de diciembre.<br>
+                <small>(espero los regalos)</small></p>
+            </div>
+            </span> </li>
+          <li> <span>
+            <div>
+              <h2>Nací en</h2>
+              <a href="https://www.bing.com/maps?osid=e565a4fa-b658-4108-862c-5495ed781414&cp=-26.429005~-54.691533&lvl=12.2442&pi=0&v=2&sV=2&form=S00027" target="_blank">Eldorado, Misiones, Argentina</a> </div>
+            </span> </li>
+          <li> <span>
+            <div>
+              <h2>Vivo en</h2>
+              <a href="https://www.bing.com/maps?&cp=-25.969341~-54.513974&lvl=11.57571&pi=0&osid=638af563-b0b8-4fd3-8385-c2bf4b16da85&v=2&sV=2&form=S00027" target="_blank">Wanda, Misiones, Argentina</a> </div>
+            </span> </li>
+          <li> <span>
+            <div>
+              <p>Empecé con programación en Agosto de 1.989, en aquel entonces el lenguaje de programación más popular era el <a href="https://es.wikipedia.org/wiki/BASIC" target="_blank">BASIC</a>.</p>
+            </div>
+            </span> </li>
+          <li> <span>
+            <div>
+              <p>Desde entonces me he actualizado con la mayoría de los lenguajes de programación.</p>
+            </div>
+            </span> </li>
+          <li> <span>
+            <div>
+              <p>He realizado varios trabajos independientes para uso particular de diferentes empresas.</p>
+            </div>
+            </span> </li>
+          <li> <span>
+            <div>
+              <p>Espero que con este curso pueda profesionalizarme y mejorar mis aptitudes de programación.</p>
+            </div>
+            </span> </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="favs">
+    <div>
+      <div class="datos">
+        <h3 class="pos-abs over">Mis Tecnologías Favoritas</h3>
+        <div class="pizarra">
+          <div class="logos">
+            <div class="logo-div logo-html">
+              <div class="logo d-flex flex-column"> <img alt="HTML5 official logo" src="assets/HTML5_logo_and_wordmark.svg"> <a title="W3C, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://es.wikipedia.org/wiki/HTML5" target="_blank"><span></span></a> </div>
+            </div>
+            <div class="logo-div logo-css">
+              <div class="logo d-flex flex-column"> <img alt="CSS3 logo and wordmark" src="assets/CSS3_logo_and_wordmark.svg"> <a title="Rudloff, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://es.wikipedia.org/wiki/CSS" target="_blank"><span></span></a></div>
+            </div>
+            <div class="logo-div logo-js">
+              <div class="logo d-flex flex-column"> <img alt="Unofficial JavaScript logo 2" src="assets/Unofficial_JavaScript_logo_2.svg"> <a title="Christopher Williams, Public domain, via Wikimedia Commons" href="https://es.wikipedia.org/wiki/JavaScript" target="_blank"><span></span></a></div>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="d-flex flex-column">
-        <h3>Mis Actividades Favoritas:</h3>
-        <form id="datos" class="d-flex flex-column">
-            <input name="actividad" placeholder="Nombre de la Actividad">
-            <textarea name="descripcion" placeholder="Descripción de la Actividad" rows="5"></textarea>
-            <input name="imagen" placeholder="Enlace de la Imagen" type="url">
-            <button type="submit">Agregar Actividad</button>
-        </form>
-        <div id="actividades" class="d-flex justify-content-evenly align-items-center">
-            No hay Datos
+      </div>
+    </div>
+  </section>
+  <section id="activs">
+    <div>
+      <div class="datos overflow-hidden">
+        <div class="formulario">
+          <h3 class="pos-abs">Mis Actividades Favoritas:</h3>
+          <form id="datos">
+            <div class="pos-input">
+              <input name="actividad" type="text" required autocomplete="off">
+              <label>Nombre de la Actividad</label>
+            </div>
+            <div class="pos-input">
+              <textarea name="descripcion" required rows="5"></textarea>
+              <label>Descripción de la Actividad</label>
+            </div>
+            <div class="pos-input">
+              <input name="imagen" type="url" required autocomplete="off">
+              <label>Enlace de la Imagen</label>
+            </div>
+            <div class="pos-input">
+              <button type="submit">Agregar Actividad</button>
+            </div>
+          </form>
+          <div id="actividades" class="d-flex justify-content-evenly align-items-center"> No hay Datos </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+</main>
 </body>
 </html>
