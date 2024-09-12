@@ -74,8 +74,6 @@ const agregaClick = () => {
             nuevaFigure.appendChild(desc);
             nuevoDiv.appendChild(nuevaFigure);
 
-            //const el_item = '<div class=""><figure><span>Imagen</span><img src="https://picsum.photos/id/102/800/600" alt="Image #2"><figcaption>Image #2</figcaption></figure></div>'
-
             galeria.appendChild(nuevoDiv);
 
             Activides.agregarActividad(actividad.value, descripcion.value, imagen.value);
@@ -107,7 +105,6 @@ const eliminarClick = (event) => {
         Activides.eliminarActividad(aElimiId);
 
         const galeria = document.getElementById("actividadesGaleria");
-
         if (galeria.childElementCount === 0) {
             galeria.innerHTML = "No Hay Actividades";
         }
