@@ -376,6 +376,9 @@ i {
   background-blend-mode: color-dodge;
 }
 
+.galeria_item:hover .delButton {
+  opacity: 1;
+}
 figure {
   position: relative;
 }
@@ -393,6 +396,7 @@ figure span {
   left: 0px;
   right: 0px;
   padding: 0px 4px;
+  text-transform: capitalize;
 }
 
 figcaption {
@@ -413,16 +417,24 @@ figcaption {
   background: none;
   border: none;
   position: absolute;
-  bottom: 0px;
+  top: 0px;
+  right: 0px;
+  border-radius: 4px;
+  opacity: 0;
 }
 
 .delButton img {
-  height: 24px;
-  width: 24px;
+  height: 16px;
+  width: 16px;
+  pointer-events: none;
+}
+
+.delButton:hover {
+  background-color: var(--var-amarillo);
 }
 
 .delButton:hover img {
-  filter: saturate(3);
+  filter: invert(24%) sepia(97%) saturate(7074%) hue-rotate(358deg) brightness(88%) contrast(131%);
 }
 
 .top-menu {
