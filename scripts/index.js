@@ -32,7 +32,49 @@ class las_actividades {
 
 const Activides = new las_actividades();
 
-const agregaClick = () => {
+function actividadHTML(la_actividad) {
+    const { id, actividad, descripcion, imagen } = la_actividad;
+
+    const nuevoDiv = document.createElement("div");
+    nuevoDiv.id = "activ" + id;
+    nuevoDiv.classList.add("galeria_item");
+    const nuevaFigure = document.createElement("figure");
+    const titulo = document.createElement("span");
+    titulo.innerHTML = actividad;
+    const delButton = document.createElement("button");
+    delButton.id = "delActiv" + id;
+    delButton.classList.add("delButton");
+    delButton.title = "Eliminar Actividad " + actividad;
+    delButton.addEventListener("click", eliminarClick);
+    const delImg = document.createElement("img");
+    delImg.src = "assets/delete-button.svg";
+    delButton.appendChild(delImg);
+    titulo.appendChild(delButton);
+    nuevaFigure.appendChild(titulo);
+    const laImagen = document.createElement("img");
+    laImagen.alt = actividad;
+    laImagen.src = imagen;
+    nuevaFigure.appendChild(laImagen);
+    const desc = document.createElement("figcaption");
+    desc.innerHTML = descripcion;
+    nuevaFigure.appendChild(desc);
+    nuevoDiv.appendChild(nuevaFigure);
+
+    return nuevoDiv;
+}
+
+function targetasHTML() {
+    const galeria = document.getElementById("actividadesGaleria");
+    galeria.innerHTML = "";
+
+    const lasActividades = Activides.verActivicades();
+
+    const lasTargetas = lasActividades.map(actividadHTML);
+
+    lasTargetas.forEach(elemento => galeria.appendChild(elemento));
+}
+
+function agregaClick() {
     const los_campos = document.getElementsByClassName("campo");
     // Verifica que todos los campos tengan valor
     let isOk = Array.from(los_campos).every(campo => campo.value.trim() !== '');
@@ -43,40 +85,9 @@ const agregaClick = () => {
 
             const { actividad, descripcion, imagen } = los_campos;
 
-            const galeria = document.getElementById("actividadesGaleria");
-
-            if (galeria.childElementCount === 0) {
-                galeria.innerHTML = "";
-            }
-
-            const nuevoDiv = document.createElement("div");
-            nuevoDiv.id = "activ" + Activides.id;
-            nuevoDiv.classList.add("galeria_item");
-            const nuevaFigure = document.createElement("figure");
-            const titulo = document.createElement("span");
-            titulo.innerHTML = actividad.value;
-            const delButton = document.createElement("button");
-            delButton.id = "delActiv" + Activides.id;
-            delButton.classList.add("delButton");
-            delButton.title = "Eliminar Actividad";
-            delButton.addEventListener("click", eliminarClick);
-            const delImg = document.createElement("img");
-            delImg.src = "assets/delete-button.svg";
-            delButton.appendChild(delImg);
-            titulo.appendChild(delButton);
-            nuevaFigure.appendChild(titulo);
-            const laImagen = document.createElement("img");
-            laImagen.alt = actividad.value;
-            laImagen.src = imagen.value;
-            nuevaFigure.appendChild(laImagen);
-            const desc = document.createElement("figcaption");
-            desc.innerHTML = descripcion.value;
-            nuevaFigure.appendChild(desc);
-            nuevoDiv.appendChild(nuevaFigure);
-
-            galeria.appendChild(nuevoDiv);
-
             Activides.agregarActividad(actividad.value, descripcion.value, imagen.value);
+
+            targetasHTML();
 
             Array.from(los_campos).forEach(campo => campo.value = "");
         } catch (_) {
