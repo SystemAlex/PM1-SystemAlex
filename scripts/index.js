@@ -32,12 +32,14 @@ class las_actividades {
 
 const Activides = new las_actividades();
 
+// Actividad a HTML
 function actividadHTML(la_actividad) {
     const { id, actividad, descripcion, imagen } = la_actividad;
 
     const nuevoDiv = document.createElement("div");
     nuevoDiv.id = "activ" + id;
     nuevoDiv.classList.add("galeria_item");
+
     const nuevaFigure = document.createElement("figure");
     const titulo = document.createElement("span");
     titulo.innerHTML = actividad;
@@ -63,6 +65,7 @@ function actividadHTML(la_actividad) {
     return nuevoDiv;
 }
 
+// Todas las actividades a HTML
 function targetasHTML() {
     const galeria = document.getElementById("actividadesGaleria");
     galeria.innerHTML = "";
