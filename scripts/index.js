@@ -1,31 +1,31 @@
 class Activity {
-    constructor(id, actividad, descripcion, imagen) {
+    constructor(id, title, description, imagen) {
         this.id = id;
-        this.actividad = actividad;
-        this.descripcion = descripcion;
-        this.imagen = imagen;
+        this.title = title;
+        this.description = description;
+        this.imgUrl = imgUrl;
     }
 }
 
 class Repository {
     constructor() {
-        this.actividades = [];
+        this.activities = [];
         this.id = 0;
     }
 
-    verActivicades() {
-        return this.actividades;
+    getAllActivities() {
+        return this.activities;
     }
 
-    agregarActividad(actividad, descripcion, imagen) {
-        this.actividades.push(new Activity(this.id, actividad, descripcion, imagen));
+    createActivity(title, description, imgUrl) {
+        this.activities.push(new Activity(this.id, title, description, imgUrl));
         this.id++;
     }
 
-    eliminarActividad(id) {
-        const indice = this.actividades.findIndex(actividad => actividad.id === (id * 1));
+    deleteActivity(id) {
+        const indice = this.activities.findIndex(title => title.id === (id * 1));
         if (indice !== -1) {
-            this.actividades.splice(indice, 1);
+            this.activities.splice(indice, 1);
         }
     }
 }
@@ -34,7 +34,7 @@ const Activides = new Repository();
 
 // Actividad a HTML
 function actividadHTML(Activity) {
-    const { id, actividad, descripcion, imagen } = Activity;
+    const { id, title, description, imgUrl } = Activity;
 
     const nuevoDiv = document.createElement("div");
     nuevoDiv.id = "activ" + id;
@@ -42,11 +42,11 @@ function actividadHTML(Activity) {
 
     const nuevaFigure = document.createElement("figure");
     const titulo = document.createElement("span");
-    titulo.innerHTML = actividad;
+    titulo.innerHTML = title;
     const delButton = document.createElement("button");
     delButton.id = "delActiv" + id;
     delButton.classList.add("delButton");
-    delButton.title = "Eliminar Actividad " + actividad;
+    delButton.title = "Eliminar Actividad " + title;
     delButton.addEventListener("click", eliminarClick);
     const delImg = document.createElement("img");
     delImg.src = "assets/delete-button.svg";
@@ -54,11 +54,11 @@ function actividadHTML(Activity) {
     titulo.appendChild(delButton);
     nuevaFigure.appendChild(titulo);
     const laImagen = document.createElement("img");
-    laImagen.alt = actividad;
-    laImagen.src = imagen;
+    laImagen.alt = title;
+    laImagen.src = imgUrl;
     nuevaFigure.appendChild(laImagen);
     const desc = document.createElement("figcaption");
-    desc.innerHTML = descripcion;
+    desc.innerHTML = description;
     nuevaFigure.appendChild(desc);
     nuevoDiv.appendChild(nuevaFigure);
 
@@ -70,7 +70,7 @@ function targetasHTML() {
     const galeria = document.getElementById("actividadesGaleria");
     galeria.innerHTML = "";
 
-    const lasActividades = Activides.verActivicades();
+    const lasActividades = Activides.getAllActivities();
 
     const lasTargetas = lasActividades.map(actividadHTML);
 
@@ -83,19 +83,19 @@ function agregaClick() {
     let isOk = Array.from(los_campos).every(campo => campo.value.trim() !== '');
     if (isOk) {
         try {
-            // Verifica si el enlace a la imagen es valido
-            new URL(los_campos.imagen.value);
+            // Verifica si el enlace a la imgUrl es valido
+            new URL(los_campos.imgUrl.value);
 
-            const { actividad, descripcion, imagen } = los_campos;
+            const { title, description, imgUrl } = los_campos;
 
-            Activides.agregarActividad(actividad.value, descripcion.value, imagen.value);
+            Activides.createActivity(title.value, description.value, imgUrl.value);
 
             targetasHTML();
 
             Array.from(los_campos).forEach(campo => campo.value = "");
         } catch (_) {
             alert("Debe ingresar un enlace valido");
-            los_campos.imagen.focus();
+            los_campos.imgUrl.focus();
         }
     } else {
         alert("Debe ingresar todos los campos");
@@ -116,7 +116,7 @@ const eliminarClick = (event) => {
     let eliminar = confirm("Confirma Eliminar la Actividad?");
     if (eliminar) {
         document.getElementById(aElimi).remove();
-        Activides.eliminarActividad(aElimiId);
+        Activides.deleteActivity(aElimiId);
 
         const galeria = document.getElementById("actividadesGaleria");
         if (galeria.childElementCount === 0) {
@@ -124,3 +124,5 @@ const eliminarClick = (event) => {
         }
     }
 }
+
+module.exports = { Activity, Repository };
