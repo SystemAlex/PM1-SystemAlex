@@ -15,8 +15,8 @@ por SystemAlex
 ## Lecture 3 ✔️
  - Manipulación del DOM a través de DOM API. ✓
 
-## Lecture 4
- - 
+## Lecture 4 ✔️
+ - Testing utilizando el Framework Jasmine. ✓
 
 ## Lecture 5
  - 
