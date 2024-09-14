@@ -1,4 +1,4 @@
-class la_actividad {
+class Activity {
     constructor(id, actividad, descripcion, imagen) {
         this.id = id;
         this.actividad = actividad;
@@ -7,7 +7,7 @@ class la_actividad {
     }
 }
 
-class las_actividades {
+class Repository {
     constructor() {
         this.actividades = [];
         this.id = 0;
@@ -18,7 +18,7 @@ class las_actividades {
     }
 
     agregarActividad(actividad, descripcion, imagen) {
-        this.actividades.push(new la_actividad(this.id, actividad, descripcion, imagen));
+        this.actividades.push(new Activity(this.id, actividad, descripcion, imagen));
         this.id++;
     }
 
@@ -30,11 +30,11 @@ class las_actividades {
     }
 }
 
-const Activides = new las_actividades();
+const Activides = new Repository();
 
 // Actividad a HTML
-function actividadHTML(la_actividad) {
-    const { id, actividad, descripcion, imagen } = la_actividad;
+function actividadHTML(Activity) {
+    const { id, actividad, descripcion, imagen } = Activity;
 
     const nuevoDiv = document.createElement("div");
     nuevoDiv.id = "activ" + id;
