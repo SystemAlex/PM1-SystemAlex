@@ -124,5 +124,3 @@ const eliminarClick = (event) => {
         }
     }
 }
-
-module.exports = { Activity, Repository };
