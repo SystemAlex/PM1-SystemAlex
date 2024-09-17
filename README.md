@@ -19,4 +19,4 @@ por SystemAlex
  - Testing utilizando el Framework Jasmine. ✓
 
 ## Lecture 5 ✔️
- - La objetivo principal de esta homework es crear y configurar correctamente el repositorio en Github para gestionar correctamente el flujo el trabajo en equipo.
+ - La objetivo principal de esta homework es crear y configurar correctamente el repositorio en Github para gestionar correctamente el flujo el trabajo en equipo. ✓
