@@ -3,7 +3,7 @@ class Activity {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.imgUrl = imgUrl;
+        this.imgUrl = imagen;
     }
 }
 
