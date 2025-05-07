@@ -1,6 +1,6 @@
 # Soy Henry - Proyecto M1
 por SystemAlex
-### Implementacion en linea https://systemalex.free.nf/m1/
+### Implementacion en linea http://systemalex.free.nf/m1/
 
 ## Lecture 1 ✔️
  - Manejo de repositorios con Git y Github. ✓
@@ -19,3 +19,12 @@ por SystemAlex
 
 ## Lecture 5 ✔️
  - La objetivo principal de esta homework es crear y configurar correctamente el repositorio en Github para gestionar correctamente el flujo el trabajo en equipo. ✓
+
+# Implementación
+
+``` git clone https://github.com/SystemAlex/PM1-SystemAlex.git ```
+
+``` npm install ```
+
+
+``` npm start ```
