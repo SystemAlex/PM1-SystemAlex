@@ -22,9 +22,8 @@ por SystemAlex
 
 # Implementación
 
-``` git clone https://github.com/SystemAlex/PM1-SystemAlex.git ```
-
-``` npm install ```
-
-
-``` npm start ```
+```
+git clone https://github.com/SystemAlex/PM1-SystemAlex.git
+npm install
+npm start
+```
